@@ -9,12 +9,6 @@ import MainImage from "../../components/UI/MainImage/MainImage";
 const Index = () => {
 
     const {user} = useTelegram();
-    let image = document.querySelector('.image');
-
-    const click = () => {
-        image.classList.toggle('active');
-    }
-
 
     return (
         <div className={'index'}>
