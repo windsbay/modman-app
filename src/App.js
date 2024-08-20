@@ -5,6 +5,7 @@ import {Route, Routes} from "react-router-dom";
 import Friends from "./pages/Friends/Friends";
 import Tasks from "./pages/Tasks/Tasks";
 import Index from "./pages/Index/Index";
+import AnimatedBackground from "./components/UI/AnimatedBackground/AnimatedBackground";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <Route path={'friends'} element={<Friends />}/>
             </Routes>
             <Bottom/>
+            <AnimatedBackground />
         </div>
     );
 }
