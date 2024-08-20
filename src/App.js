@@ -1,14 +1,21 @@
 import React from "react";
-import {BrowserRouter} from "react-router-dom";
-import AppRouter from "./components/AppRouter";
+
 import Bottom from "./components/Bottom/Bottom";
+import {Route, Routes} from "react-router-dom";
+import Friends from "./pages/Friends/Friends";
+import Tasks from "./pages/Tasks/Tasks";
+import Index from "./pages/Index/Index";
 
 function App() {
     return (
-        <BrowserRouter>
-            <AppRouter />
-            <Bottom />
-        </BrowserRouter>
+        <div className="App">
+            <Routes>
+                <Route index element={<Index />}/>
+                <Route path={'tasks'} element={<Tasks/>}/>
+                <Route path={'friends'} element={<Friends />}/>
+            </Routes>
+            <Bottom/>
+        </div>
     );
 }
 
